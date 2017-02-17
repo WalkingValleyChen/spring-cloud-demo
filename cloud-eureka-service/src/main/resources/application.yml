@@ -1,0 +1,15 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: cloud-eureka-service
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7000/eureka/
+  instance:
+    statusPageUrl: https://${eureka.hostname}/info
+    healthCheckUrl: https://${eureka.hostname}/health
+    homePageUrl: https://${eureka.hostname}/
+    healthcheck:
+      enabled: true
